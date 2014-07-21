@@ -1,44 +1,25 @@
-// OnLoad
+var userAction = prompt("Would you like to create or search for contacts?");
 
-
-
-
-// Search
-function search() {
-	var userRequest = prompt("Who are you looking for in your contacts?");
-
-	if (userRequest === "Bob") {
-		var person = new Object();
-		person.name = "Bob";
-		person.age = "53";
-		person.telphone = "66234597";
-		person.gender = "Male"
-
-		document.getElementById('name').innerHTML = "Name: " + person.name;
-		document.getElementById('age').innerHTML = "Age: " + person.age;
-		document.getElementById('telphone').innerHTML = "Telephone: " + person.telphone;
-		document.getElementById('gender').innerHTML = "Gender: " + person.gender;
-
-		document.getElementById('totalAge').innerHTML = "Our users total age: ";
-	} else if (userRequest === "Zara") {
-		var person2 = new Object();
-		person2.name = "Zara";
-		person2.age = "26";
-		person2.telphone = "66027496";
-		person2.gender = "Female";
-
-		document.getElementById('name').innerHTML = "Name: " + person2.name;
-		document.getElementById('age').innerHTML = "Age: " + person2.age;
-		document.getElementById('telphone').innerHTML = "Telephone: " + person2.telphone;
-		document.getElementById('gender').innerHTML = "Gender: " + person2.gender;
-
-		document.getElementById('totalAge').innerHTML = "Our users total age: ";
-	} else if (userRequest === "Lochie") {
-		var person3 = new Object();
-		person3.name = "Lochie";
-
-		document.getElementById('name').innerHTML = "Name: " person3.age;
-	}
+if (userAction === "search") {
+	search();
+} else {
+	var customFn = prompt("Enter your contacts name");
+	var customAg = prompt("Enter your contacts age");
+	document.cookie=customAg;
+	search();
 }
 
-window.onload = search;
+function search() {
+	var userRequest = prompt("Who are you looking for?");
+
+	if (userRequest === customFn) {
+		alert("Passed");
+		var contact1 = new Object();
+		contact1.name = customFn;
+		contact1.age = customAg;
+
+		document.write("Name: " + contact1.name + "<br />");
+		document.write("Age: " + contact1.age + "<br />");
+
+	}
+}
