@@ -1,87 +1,12 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script>
-	var person = new Object();
-	person.name = "Bob";
-	person.age = 53;
-	person.telphone = "66250095";
-	person.gender = "Male";
-
-	var person2 = new Object();
-	person2.name = "Zara";
-	person2.age = 19;
-	person2.telphone = "667892423";
-	person2.gender = "Female";
-
-	var totalAge = person.age + person2.age;
-
-	function search(person, person2) {
-		alert("Rhys please note: type in Zara or Bob also pay attetion to Captial letters!");
-		var userRequest = prompt("Who are you looking for in your contacts?");
-
-		if (userRequest === "Bob") {
-			// Store the data here
-			var person = new Object();
-			person.name = "Bob";
-			person.age = 53;
-			person.telphone = "66250095";
-			person.gender = "Male";
-			// END HERE
-
-
-			// Print out the data
-			document.getElementById('name').innerHTML = "name: " + person.name;
-			document.getElementById('age').innerHTML = "age: " + person.age;
-			document.getElementById('telphone').innerHTML = "telphone: " + person.telphone;
-			document.getElementById('gender').innerHTML = "gender: " + person.gender;
-			// END HERE
-
-			// Total age of all our users
-			document.getElementById('totalAge').innerHTML = "Our users total age: " + totalAge;
-			// END HERE
-		}
-		else if (userRequest === "Zara") {
-			// Store the data here
-			var person2 = new Object();
-			person2.name = "Zara";
-			person2.age = 19;
-			person2.telphone = "667892423";
-			person2.gender = "Female";
-			// END HERE
-
-			// Print out the data here
-			document.getElementById('name').innerHTML = "name: " + person2.name;
-			document.getElementById('age').innerHTML = "age: " + person2.age;
-			document.getElementById('telphone').innerHTML = "telphone: " + person2.telphone;
-			document.getElementById('gender').innerHTML = "gender: " + person2.gender;
-			// END HERE
-
-			// Total age of all our users
-			document.getElementById('totalAge').innerHTML = "Our users total age: " + totalAge;
-			// END HERE
-		} else {
-			alert("We Could not find " + userRequest);
-		}
-	}
-
-
-	function water() {
-
-	}
-	window.onload = search;
-	</script>
+	<meta charset="UTF-8">
+	<title>Contact list testing</title>
+	<script src="main.js"></script>
 </head>
 <body>
 <div id="name"></div>
-<br>
 <div id="age"></div>
-<br>
-<div id="telphone"></div>
-<br>
 <div id="gender"></div>
-<br>
-<div id="totalAge"></div>
 </body>
 </html>
